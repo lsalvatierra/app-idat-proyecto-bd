@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="layout::head">
+<meta charset="UTF-8">
+</head>
+<body>
+	<nav th:replace="layout::menu"></nav>
+	<div class="card">
+		<div class="card-header">Registrar Tutorial</div>
+		<div class="card-body">
+			<form th:action="@{/frmRegTutorial}" method="post"
+				th:object="${tutorial}">
+				<div class="mb-3">
+					<label for="txttitulo" class="form-label">Título
+							</label> <input type="text" class="form-control"
+							name="titulo" id="txttitulo">
+				</div>
+				<div class="mb-3">
+					<label for="txtdescripcion" class="form-label">Descripción
+						</label> <input type="text" class="form-control"
+						name="descripcion" id="txtdescripcion">
+				</div>
+				<div class="mb-3">
+					<button type="submit" class="btn btn-primary">Registrar Tutorial</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

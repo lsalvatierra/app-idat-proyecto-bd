@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="layout::head">
+<meta charset="UTF-8">
+</head>
+<body>
+	<nav th:replace="layout::menu"></nav>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">Id</th>
+				<th scope="col">Título</th>
+				<th scope="col">Descripción</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="tutorial :${listtutoriales}">				
+				<td th:text="${tutorial.id}"></td>
+				<td th:text="${tutorial.titulo}"></td>
+				<td th:text="${tutorial.descripcion}"></td>
+			</tr>
+		</tbody>
+	</table>
+
+</body>
+</html>
